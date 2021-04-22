@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;
+  0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Data Pasien Puskesmas</title>
+</head>
+
+<body style="font-family: 'Montserrat', sans-serif;">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <a class="navbar-brand" href="#" style="font-weight: 600; padding-left: 30px;">Data Pasien Puskesmas</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+
+  <br />
+  <br />
+
+  <div>
+    <form action="index.php" method="POST" style="width: 80%; margin: auto;">
+      <p class="h5 mb-4" style="margin-top: 5%; text-align: center; font-weight:600;">Data Diri Pasien</p>
+        <label for="nama" style="margin-left: 0">Nama Lengkap</label>
+        <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" required>
+        <br>
+
+        <label for="nik" style="margin-left: 0">NIK</label>
+        <input type="text" name="nik" class="form-control" placeholder="NIK" required>
+        <br>
+        <div class="form-group">
+            <div class="form-row mb-4">
+                <div class="col">
+                    <!-- First name -->
+                    <label for="tempat_lahir" style="margin-left: 0">Tempat Lahir</label>
+                    <input type="text" name="tempat_lahir" class="form-control" placeholder="Tempat lahir" required>
+                </div>
+                <div class="col">
+                    <!-- Last name -->
+                    <label for="tanggal" style="margin-left: 0">Tanggal Lahir</label>
+                    <input type="date" name="tanggal" class="form-control" id="tanggal" value="" required>
+                </div>
+            </div>
+          </div>
+        <div class="form-group">
+            <label for="gender" style="margin-left: 0">Jenis Kelamin</label>
+            <br>
+            <div class="form-check form-check-inline">
+              <p><input class="form-check-input" type="radio" name="gender" id="gender" value="Perempuan" >Perempuan</p>
+            </div>
+            <div class="form-check form-check-inline">
+              <p><input class="form-check-input" type="radio" name="gender" id="gender" value="Laki-laki">Laki-laki</p>
+            </div>
+          </div>
+
+          <div class="form-row mb-4">
+            <div class="col">
+                <!-- E-mail -->
+                <label for="email" style="text-align: left;">Email</label>
+                <input type="email" name="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail" required>
+            </div>
+            <div class="col">
+                <!-- Phone number -->
+                <label for="telepon" style="margin-left: 0">Nomor Telepon</label>
+                <input type="tel" name="telepon" id="defaultRegisterPhonePassword" class="form-control" placeholder="Nomor Telepon" aria-describedby="defaultRegisterFormPhoneHelpBlock" required>
+            </div>
+        </div>
+
+        <label for="pekerjaan" style="margin-left: 0">Pekerjaan</label>
+        <input type="text" name="pekerjaan" class="form-control" placeholder="Pekerjaan" required>
+        <br>
+        <label for="bpjs" style="margin-left: 0">Nomor BPJS (jika menggunakan BPJS)</label>
+        <input type="text" name="bpjs" class="form-control" placeholder="Nomor BPJS">
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" name="add" class="btn btn-primary" style="border-radius: 30px; width: 80px; font-size: smaller; 
+      padding: 10px; margin-top: 30px; float: right; margin-right: 10%; margin-bottom: 10%">Tambah</button>
+    </form>
+    
+    <br>
+
+  </div>
+  <!-- Tabel 1 - Task -->
+  <div style=" margin-top: 15%">
+    <h4 style="text-align: center;">Data Pasien</h4>
+    <!-- TABEL1 -->
+    <table border="1" class="table" style="text-align: center; width: 95%; margin: auto; font-size: 10px; margin-bottom: 10%;">
+      <thead class="thead-success">
+        <tr>
+          <td style="width: 20px;">No</td>
+          <td>Nama Lengkap</td>
+          <td>NIK</td>
+          <td>Tempat Lahir</td>
+          <td>Tanggal Lahir</td>
+          <td>Jenis Kelamin</td>
+          <td>No. Telepon</td>
+          <td>Email</td>
+          <td>Pekerjaan</td>
+          <td>No. BPJS</td>
+          <td>Status Vaksin</td>
+          <td>Aksi</td>
+        </tr>
+      </thead>
+      <tr>
+        <!-- DATA YG AKAN DIGANTI -->
+        DATA_TABEL
+      </tr>
+
+    </table>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
